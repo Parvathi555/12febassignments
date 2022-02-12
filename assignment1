@@ -1,0 +1,36 @@
+rice=60#per kg
+oil=120#per kg
+sugar=40#per kg
+blackgram=90#per kg
+redgram=100# per kg
+rq=int(input('Enter quantity of rice in kg:'))
+oq=int(input('Enter quantity of oil in kg:'))
+sq=int(input('Enter quantity of sugar in kg:'))
+bgq=int(input('Enter quantity of black gram in kg:'))
+rgq=int(input('Enter quantity of reg gram in kg:'))
+bill=(rice*rq)+(oil*oq)+(sugar*sq)+(blackgram*bgq)+(redgram*rgq)
+if bill>5000:
+    disc=bill*10/100
+    tax=disc*10/100
+elif bill>3000:
+    disc=bill*8/100
+    tax=disc*10/100
+elif bill>2000:
+    disc=bill*5/100
+    tax=disc*18/100
+elif bill>1000:
+    disc=bill*3/100
+    tax=disc*18/100
+else:
+    tax=bill*18/100
+    disc=0
+mainbill=bill-disc+tax
+print("Your bill is:",mainbill)
+    
+    
+    output:Enter quantity of rice in kg:1
+           Enter quantity of oil in kg:1
+           Enter quantity of sugar in kg:1
+           Enter quantity of black gram in kg:1
+           Enter quantity of red gram in kg:1
+           Your bill is:483.8
